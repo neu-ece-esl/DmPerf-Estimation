@@ -1,0 +1,6 @@
+Loaded training set, size: (5000, 46)
+Loaded test set, size: (10000, 46)
+Train Time: 0.007401704788208008 seconds.
+Prediction Time: 0.0005044937133789062 seconds.
+MSE
+0.043723907
