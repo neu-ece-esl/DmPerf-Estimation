@@ -12,4 +12,4 @@ hellomake: mlp_inference.cpp
 	$(CC) $(CFLAGS) -o mlp_inference mlp_inference.cpp
 
 test:
-	./mlp_inference
+	./mlp_inference # python3 convert_model.py my_model_5_2048.h5 fdeep_model.json

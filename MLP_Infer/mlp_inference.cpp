@@ -1,3 +1,5 @@
+#define FDEEP_FLOAT_TYPE double
+
 #include <iostream>
 #include <fdeep/fdeep.hpp>
 
@@ -5,8 +7,8 @@
 
 int main()
 {
-    std::vector<float> input{1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0};
-    float gtruth = 17.5876;
+    std::vector<double> input{1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0};
+    double gtruth = 17.5876;
 
     const auto model = fdeep::load_model("fdeep_model.json"); // , true, fdeep::dev_null_logger);
 
