@@ -11,7 +11,16 @@ from keras.optimizers import Adam
 
 import os
 import random
+import logging
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+logging.getLogger('tensorflow').setLevel(logging.FATAL)
+
 import tensorflow as tf
+
+tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.ERROR)
+tf.get_logger().setLevel(logging.ERROR)
+logging.getLogger('tensorflow').disabled = True
+
 
 seed_value= 0
 os.environ['PYTHONHASHSEED']=str(seed_value)
@@ -19,17 +28,17 @@ random.seed(seed_value)
 np.random.seed(seed_value)
 tf.random.set_seed(seed_value)
 
-train_size = 1000
-test_size = 10000
-
 layer_count =  int(sys.argv[1])
 neurons = int(sys.argv[2])
+
+train_size = int(sys.argv[3]) #1000
+test_size = 10000
 
 x_train_filename = 'x_{}.csv'.format(train_size)
 y_train_filename = 'y_{}.csv'.format(train_size)
 x_test_filename = 'x_{}.csv'.format(test_size)
 y_test_filename = 'y_{}.csv'.format(test_size)
-p_test_filename = 'p_MLP_L_{}_{}.csv'.format(train_size, neurons)
+p_test_filename = 'p_MLP_L_{}.csv'.format(train_size)
 
 def create_model(layers):
     model = Sequential()
@@ -76,12 +85,12 @@ model.compile(loss='mean_squared_error', optimizer=Adam(learning_rate=1e-3))
 
 start_train = time.time()    
 history = model.fit(x_train, y_train, #validation_split=0.2, 
-            epochs=epochs, batch_size=batch_size, verbose=1)#, callbacks=[stop_callback])
+            epochs=epochs, batch_size=batch_size, verbose=0)#, callbacks=[stop_callback])
 end_train = time.time()
 train_time = end_train - start_train
 print("Train Time: %s seconds." % (train_time))
 
-model.save('my_model_{}_{}.h5'.format(layer_count, neurons), include_optimizer=False)
+model.save('my_model_{}_{}_{}.h5'.format(train_size, layer_count, neurons), include_optimizer=False)
 
 # score = model.evaluate(x_test, y_test)
 # print(score)

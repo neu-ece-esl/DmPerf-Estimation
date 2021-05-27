@@ -1,21 +1,5 @@
-# rm mlp_results.csv
-# for layer in 2 5 9 17 33
-# do
-#     for neurons in 1 2 8 16 64 128 256
-#     do
-#         echo "layers: ${layer}, neurons: ${neurons}"
-#         python MLP.py $layer $neurons
-#     done
-# done
-
-# python MLP.py 1 1
-
-
-for layer in 2 5 9 17 33
+for train_size in 50 100 200 500 1000 2000 5000
 do
-    for neurons in 8193
-    do
-        echo "layers: ${layer}, neurons: ${neurons}"
-        python MLP.py $layer $neurons
-    done
+    echo "Trianing size: ${train_size}"
+    python MLP.py 5 2048 $train_size 
 done
