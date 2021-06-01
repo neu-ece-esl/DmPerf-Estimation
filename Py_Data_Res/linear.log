@@ -1,0 +1,49 @@
+Trianing size: 50
+Loaded training set, size: (50, 46)
+Loaded test set, size: (10000, 46)
+Train Time: 0.00774693489075 seconds.
+Prediction Time: 0.0099618434906 seconds.
+MSE
+10.846796
+Trianing size: 100
+Loaded training set, size: (100, 46)
+Loaded test set, size: (10000, 46)
+Train Time: 0.00102210044861 seconds.
+Prediction Time: 0.00885796546936 seconds.
+MSE
+0.074571215
+Trianing size: 200
+Loaded training set, size: (200, 46)
+Loaded test set, size: (10000, 46)
+Train Time: 0.016263961792 seconds.
+Prediction Time: 0.00984811782837 seconds.
+MSE
+0.060822163
+Trianing size: 500
+Loaded training set, size: (500, 46)
+Loaded test set, size: (10000, 46)
+Train Time: 0.00473809242249 seconds.
+Prediction Time: 0.0107140541077 seconds.
+MSE
+0.048048586
+Trianing size: 1000
+Loaded training set, size: (1000, 46)
+Loaded test set, size: (10000, 46)
+Train Time: 0.00248599052429 seconds.
+Prediction Time: 0.020397901535 seconds.
+MSE
+0.045586586
+Trianing size: 2000
+Loaded training set, size: (2000, 46)
+Loaded test set, size: (10000, 46)
+Train Time: 0.00387907028198 seconds.
+Prediction Time: 0.00853514671326 seconds.
+MSE
+0.044505652
+Trianing size: 5000
+Loaded training set, size: (5000, 46)
+Loaded test set, size: (10000, 46)
+Train Time: 0.00827980041504 seconds.
+Prediction Time: 0.0146729946136 seconds.
+MSE
+0.043723907

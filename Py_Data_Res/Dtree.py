@@ -1,10 +1,11 @@
 import csv
+import sys
 import time
 import numpy as np
 from sklearn import tree
 from sklearn.metrics import mean_squared_error
 
-train_size = 5000
+train_size = int(sys.argv[1])
 test_size = 10000
 
 x_train_filename = 'x_{}.csv'.format(train_size)
