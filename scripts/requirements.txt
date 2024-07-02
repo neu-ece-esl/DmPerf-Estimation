@@ -1,0 +1,4 @@
+numpy==2.0.0
+svg.path==6.3
+svgpathtools==1.6.1
+svgwrite==1.4.3
