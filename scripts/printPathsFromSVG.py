@@ -94,8 +94,8 @@ paths_info = extract_paths(svg_file)
 
 pathList = { 
     'path98': 'OOP',
-    'path109': 'RDP',
-    'path120': 'GIDE',
+    'path109': 'GIDE',
+    'path120': 'RDP',
     'path131': 'GIDE1:1',
     'path142': 'FOP',
 }
